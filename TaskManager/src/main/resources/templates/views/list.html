@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/main_layout}">
+
+
+<link rel="stylesheet" href="../../static/css/lumen/bootstrap.min.css"
+      th:href="@{css/lumen/bootstrap.min.css}"/>
+<link rel="stylesheet" href="../../static/css/style.css"
+      th:href="@{css/style.css}"/>
+<script th:src="@{webjars/jquery/3.2.1/jquery.min.js}"></script>
+<script th:src="@{webjars/bootstrap/4.0.0-beta.3/js/bootstrap.min.js}"></script>
+
+
+<head>
+
+</head>
+<body>
+
+
+
+
+
+<div layout:fragment="content" class="container mySpace">
+
+    <br/>
+
+    <form action="/users" class="form-inline">
+        <div class="form-group mb-2">
+            <input type="text" class="form-control" placeholder="Search User" th:name="name" />
+            <input type="submit" class="btn btn-primary" value="Search" />
+        </div>
+    </form>
+
+
+
+        <div class="card">
+            <div class="card card-body">
+
+                <table class="table table-hover">
+
+                    <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Add</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr th:each="user : ${users}" >
+
+                        <td th:text="${user.name}" ></td>
+                        <td th:text="${user.email}" ></td>
+
+                        <td><a th:href="@{/addTask(email=${user.email})}" class="btn btn-dark">Add task</a> </td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+
+
+</div>
+
+
+</body>
+</html>

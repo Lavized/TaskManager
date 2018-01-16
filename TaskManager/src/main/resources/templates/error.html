@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/main_layout}">
+
+
+<link rel="stylesheet" href="../static/css/lumen/bootstrap.min.css"
+      th:href="@{css/lumen/bootstrap.min.css}"/>
+
+<link rel="stylesheet" href="../static/css/style.css"
+      th:href="@{css/style.css}"/>
+
+<!-- <script src="webjars/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" ></script>-->
+<!--<script src="webjars/jquery/3.2.1/jquery.min.js" ></script>-->
+
+<script th:src="@{webjars/jquery/3.2.1/jquery.min.js}"></script>
+<script th:src="@{webjars/bootstrap/4.0.0-beta.3/js/bootstrap.min.js}"></script>
+
+
+<head>
+
+</head>
+<body>
+
+
+<div layout:fragment="content" class="container">
+
+    <br/>
+    <br/>
+    <br/>
+
+
+
+    <div>
+        There was an error | <span th:text="${message}"></span> | <span th:text="${status}" class="text text-danger"></span>
+    </div>
+
+    <div>
+        Please contact Admin!
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+
+</div>
+
+
+</body>
+</html>

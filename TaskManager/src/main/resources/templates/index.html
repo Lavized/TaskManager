@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/main_layout}">
+
+
+<link rel="stylesheet" href="../static/css/lumen/bootstrap.min.css"
+      th:href="@{css/lumen/bootstrap.min.css}"/>
+
+<link rel="stylesheet" href="../static/css/style.css"
+      th:href="@{css/style.css}"/>
+
+<!-- <script src="webjars/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" ></script>-->
+<!--<script src="webjars/jquery/3.2.1/jquery.min.js" ></script>-->
+
+<script th:src="@{webjars/jquery/3.2.1/jquery.min.js}"></script>
+<script th:src="@{webjars/bootstrap/4.0.0-beta.3/js/bootstrap.min.js}"></script>
+
+
+<head>
+
+</head>
+<body>
+
+
+<div layout:fragment="content" class="container">
+
+
+    <div class="jumbotron">
+
+
+        <p>
+
+            Welcome to the Task Manager! :)
+
+        </p>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
